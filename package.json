@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justingodden/advent-of-code-2021.git"
+  },
+  "author": "Justin Godden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justingodden/advent-of-code-2021/issues"
+  },
+  "homepage": "https://github.com/justingodden/advent-of-code-2021#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "typescript": "^4.5.2"
+  }
+}
