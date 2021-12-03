@@ -5,25 +5,24 @@ import * as path from 'path';
 
 const data: string = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf8');
 
-const strArr: string[] = data.split('\r\n')
+const strArr: string[] = data.split('\n')
 
-let x: number = 0
-let y: number = 0
+let gamma: string = ''
+let epsilon: string = ''
 
-strArr.forEach((str, idx) => {
-    let direction: string = str.replace(/[^a-zA-Z]/g, '')
-    let value: number = parseInt(str.replace(/[^0-9]/g, ''))
-    switch (direction) {
-        case "forward":
-            x += value
-            break;
-        case "down":
-            y += value
-            break;
-        case "up":
-            y -= value
-            break;
+for (let j = 0; j < strArr[0].length; j++) {
+    let count: number = 0
+    for (let i in strArr) {
+        count += parseInt(strArr[i].charAt(j))
     }
-})
 
-console.log(x * y)
+    if (count > Math.floor(strArr.length / 2)) {
+        gamma += '1'
+        epsilon += '0'
+    } else {
+        gamma += '0'
+        epsilon += '1'
+    }
+}
+
+console.log(parseInt(gamma, 2) * parseInt(epsilon, 2))
