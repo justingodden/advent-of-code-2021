@@ -1,5 +1,7 @@
 .ipynb_checkpoints/
 
+.vscode
+
 # Logs
 logs
 *.log
