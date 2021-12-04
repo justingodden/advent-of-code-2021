@@ -59,7 +59,7 @@ const isComplete = (array: number[][]): boolean => {
 
 let winningTotal: number | undefined = undefined
 
-const playGame = (gameBoards: number[][][], gameNumbers: number[]): number | void => {
+const playGame = (gameBoards: number[][][], gameNumbers: number[]): void => {
     gameNumbers.forEach(num => {
         for (let i = 0; i < gameBoards.length; i++) {
             gameBoards[i] = removeNumFromGrid(gameBoards[i], num)
@@ -70,8 +70,8 @@ const playGame = (gameBoards: number[][][], gameNumbers: number[]): number | voi
                 }
             }
         }
-    }
-    )
+    })
 }
+
 playGame(gameBoards, gameNumbers)
 console.log(winningTotal)
