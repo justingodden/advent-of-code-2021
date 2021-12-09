@@ -60,7 +60,6 @@ for (let j = 0; j < data.length; j++) {
 
         // bottom
         else if (j === data.length - 1) {
-            console.log('bottom')
             if (data[j][i] < data[j][i - 1] && data[j][i] < data[j - 1][i] && data[j][i] < data[j][i + 1]) {
                 counter += data[j][i] + 1
             }
