@@ -15,9 +15,9 @@ const singleStep = (player: Player, diceOutcome: number): void => {
 
 const newUniverse = (p1: Player, p2: Player, p1Turn: boolean): number => {
     if (p1.score >= 21) {
-        return 1;
+        return 1
     } else if (p2.score >= 21) {
-        return 0;
+        return 0
     }
 
     const currPlayer = p1Turn ? p1 : p2
